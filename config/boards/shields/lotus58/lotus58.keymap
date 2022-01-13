@@ -15,15 +15,15 @@
 
         default_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   =   |
-// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-// |  SFT  |  A  |  S  |  D   |  F   |  G   |  GUI   |  | RESET |  H   |  J    |  K    |  L   |   ;   | ' SFT |
-// |  CTRL |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  | PLAY  |  N   |  M    |  ,    |  .   |   /   | \ CTRL|
-//                     | ALT  | CTRL | SPACE| DELETE |  | ENTER | BKSPC|  ] LW | RGUI  |
+// |  ESC  |  1  |  2  |  3   |  4   |  5   |                     |  6   |  7    |  8    |  9   |   0   |   =   |
+// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                     |  Y   |  U    |  I    |  O   |   P   |   [   |
+// |  SFT  |  A  |  S  |  D   |  F   |  G   |  RESET  |  | RESET  |  H   |  J    |  K    |  L   |   ;   | ' SFT |
+// |  CTRL |  Z  |  X  |  C   |  V   |  B   |  MUTE   |  | PLAY   |  N   |  M    |  ,    |  .   |   /   | \ CTRL|
+//                     |ENT RS|  ALT | SPACE|DELETE LW|  |ENTER RS| BKSPC|  ] LW | RGUI  |
             bindings = <
 &kp ESC   &kp N1 &kp N2   &kp N3     &kp N4    &kp N5                               &kp N6    &kp N7      &kp N8    &kp N9   &kp N0   &kp EQUAL
 &kp TAB   &kp Q  &kp W    &kp E      &kp R     &kp T                                &kp Y     &kp U       &kp I     &kp O    &kp P    &kp LBKT
-&kp LSHFT &kp A  &kp S    &kp D      &kp F     &kp G      &reset         &reset     &kp H     &kp J       &kp K     &kp L    &kp SEMI &kp SQT
+&kp LSHFT &kp A  &kp S    &kp D      &kp F     &kp G      &reset         &reset     &kp H     &kp J       &kp K     &kp L    &kp SEMI &mt RSHFT SQT
 &kp LCTRL &kp Z  &kp X    &kp C      &kp V     &kp B      &kp C_MUTE     &kp C_PP   &kp N     &kp M       &kp COMMA &kp DOT  &kp FSLH &mt RCTRL BSLH
                           &lt 2 RET  &kp LALT  &kp SPACE  &lt 1 DEL      &lt 2 RET  &kp BSPC  &lt 1 RBKT  &kp RGUI  
             >;
@@ -38,7 +38,7 @@
 // |       |  !  | HOME|   ^  |  END |  %   |                   | VOL^ |  PGUP |  INS  |  ^   |  PSCR |   -   |
 // |       |  #  |  <- |   v  | ->   |  $   |        |  |       | VOLv |    <- |   ^   |  ->  |   ~   |   _   |
 // |       |  @  |  -  |  (   |  )   |  &   |        |  |       | MUTE |  PGDN |   v   |  :   |   *   |   |   |
-//                     |  F11 |      |      |        |  |       |      |       |       |       
+//                     |  F11 |      |      |        |  |       |      |       |  F12  |       
             bindings = <
 &kp GRAVE  &kp F1    &kp F2    &kp F3      &kp F4     &kp F5                     &kp F6        &kp F7     &kp F8    &kp F9     &kp F10   &kp PLUS
 &trans     &kp EXCL  &kp HOME  &kp UP      &kp END    &kp PRCNT                  &kp C_VOL_UP  &kp PG_UP  &kp INS   &kp CARET  &kp PSCRN &kp MINUS
