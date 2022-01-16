@@ -11,12 +11,12 @@
 
 / {
     behaviors {
-        altfour: num_close {
+        altf: alt_func {
             compatible = "zmk,behavior-mod-morph";
-            label = "FOUR_ALTFFOUR";
-            #binding-cells = <4>;
+            label = "ALT_FUNC";
+            #binding-cells = <0>;
             bindings = <&kp N4>, <&kp F4>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
         };
     };
 
