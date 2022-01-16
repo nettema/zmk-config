@@ -11,9 +11,9 @@
 
 / {
     behaviors {
-        n4f4: num4_altf4 {
+        altfour: num_close {
             compatible = "zmk,behavior-mod-morph";
-            label = "NUM4_ALTF4";
+            label = "FOUR_ALTFFOUR";
             #binding-cells = <4>;
             bindings = <&kp N4>, <&kp F4>;
             mods = <(MOD_LALT|MOD_RALT)>;
@@ -31,7 +31,7 @@
 // |  CTRL |  Z  |  X  |  C   |  V   |  B   |  MUTE   |  | PLAY   |  N   |  M    |  ,    |  .   |   /   | \ CTRL|
 //                     |ENT RS|  ALT | SPACE|DELETE LW|  |ENTER RS| BSPC |  ] LW | RGUI  |
             bindings = <
-&kp ESC   &kp N1 &kp N2   &kp N3     &n4f4     &kp N5                               &kp N6    &kp N7      &kp N8    &kp N9   &kp N0   &kp EQUAL
+&kp ESC   &kp N1 &kp N2   &kp N3     &altfour  &kp N5                               &kp N6    &kp N7      &kp N8    &kp N9   &kp N0   &kp EQUAL
 &kp TAB   &kp Q  &kp W    &kp E      &kp R     &kp T                                &kp Y     &kp U       &kp I     &kp O    &kp P    &kp LBKT
 &kp LSHFT &kp A  &kp S    &kp D      &kp F     &kp G      &reset         &reset     &kp H     &kp J       &kp K     &kp L    &kp SEMI &mt RSHFT SQT
 &kp LCTRL &kp Z  &kp X    &kp C      &kp V     &kp B      &kp C_MUTE     &kp C_PP   &kp N     &kp M       &kp COMMA &kp DOT  &kp FSLH &mt RCTRL BSLH
