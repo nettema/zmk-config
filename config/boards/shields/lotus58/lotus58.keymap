@@ -65,7 +65,7 @@
 // |     | INS  | PSCR | GUI   | RESET |      |                | PGUP |      |   ^   |      |       |       |
 // |     | ALT  | CTRL | SHIFT | FLASH | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BSPC  |
 // |     | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-//              |      |       |       |      |      |  |      |      |      |       |      |
+//              |      |       |       |      |      |  |      |      |  |>  |  <|<| | |>|> |
             bindings = <
 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                    &out OUT_TOG  &out OUT_USB  &out OUT_BLE  &trans     &reset  &bootloader
 &trans     &kp INS      &kp PSCRN    &kp K_CMENU  &reset       &trans                          &kp PG_UP     &trans        &kp UP        &trans     &kp N0  &trans
