@@ -14,28 +14,10 @@
         compatible = "zmk,combos";
         combo_dsklg {
             timeout-ms = <200>;
-            key-positions = <24 38 53>;
+            key-positions = <24 52>;
             layers = <0>;
             bindings = <&kp LGUI>;
-        };
-        combo_dsklc {
-            timeout-ms = <200>;
-            key-positions = <24 38 53>;
-            layers = <0>;
-            bindings = <&kp LCTRL>;
-        };
-        combo_dskl {
-            timeout-ms = <200>;
-            key-positions = <24 26 38 53>;
-            layers = <0>;
-            bindings = <&kp LEFT>;
-        };
-        combo_dskr {
-            timeout-ms = <200>;
-            key-positions = <24 28 38 53>;
-            layers = <0>;
-            bindings = <&kp RIGHT>;
-        };
+        };        
     };
 
     behaviors {
@@ -45,6 +27,20 @@
             #binding-cells = <0>;
             bindings = <&kp N4>, <&kp F4>;
             mods = <(MOD_LALT|MOD_RALT)>;
+        };
+        sleft: s_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "S_LEFT";
+            #binding-cells = <0>;
+            bindings = <&kp S>, <&kp LEFT>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+        fright: f_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "R_RIGHT";
+            #binding-cells = <0>;
+            bindings = <&kp F>, <&kp RIGHT>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
     };
 
