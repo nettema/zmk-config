@@ -9,6 +9,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define DF 0
+#define MC 1
+#define LW 2
+#define RS 3
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -54,14 +59,34 @@
 //  0|  ESC  |  1  |  2  |  3   |  4   |  5   |                     |  6   |  7    |  8    |  9   |   0   |   =   | 11
 // 12|  TAB  |  Q  |  W  |  E   |  R   |  T   |                     |  Y   |  U    |  I    |  O   |   P   |   [   | 23
 // 24|  SFT  |  A  |  S  |  D   |  F   |  G   |  RESET  |  | RESET  |  H   |  J    |  K    |  L   |   ;   | ' SFT | 37
-// 38|  CTRL |  Z  |  X  |  C   |  V   |  B   |  MUTE   |  | PLAY   |  N   |  M    |  ,    |  .   |   /   | \ CTRL| 51
+// 38|  CTRL |  Z  |  X  |  C   |  V   |  B   | MUTE RS |  | PLAY   |  N   |  M    |  ,    |  .   |   /   | \ CTRL| 51
 // 52                    |ENT RS|  ALT | SPACE|DELETE LW|  |ENTER RS| BSPC |  ] LW | RGUI  |                        59
+            bindings = <
+&kp ESC   &kp N1 &kp N2   &kp N3      &fofunc   &kp N5                               &kp N6    &kp N7      &kp N8    &kp N9   &kp N0   &kp EQUAL
+&kp TAB   &kp Q  &kp W    &kp E       &kp R     &kp T                                &kp Y     &kp U       &kp I     &kp O    &kp P    &kp LBKT
+&kp LSHFT &kp A  &sleft   &kp D       &fright   &kp G      &reset         &reset     &kp H     &kp J       &kp K     &kp L    &kp SEMI &mt RSHFT SQT
+&kp LCTRL &kp Z  &kp X    &kp C       &kp V     &kp B      &lt RS C_MUTE  &kp C_PP   &kp N     &kp M       &kp COMMA &kp DOT  &kp FSLH &mt RCTRL BSLH
+                          &lt RS RET  &kp LALT  &kp SPACE  &lt LW DEL     &lt RS RET &kp BSPC  &lt LW RBKT &kp LGUI  
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        macos_layer {
+            label = "macOs";
+//       0      1     2     3      4      5                            6      7       8       9      10      11    
+//   ------------------------------------------------------------------------------------------------------------
+//  0|  ESC  |  1  |  2  |  3   |  4   |  5   |                     |  6   |  7    |  8    |  9   |   0   |   =   | 11
+// 12|  TAB  |  Q  |  W  |  E   |  R   |  T   |                     |  Y   |  U    |  I    |  O   |   P   |   [   | 23
+// 24|  SFT  |  A  |  S  |  D   |  F   |  G   |  RESET  |  | RESET  |  H   |  J    |  K    |  L   |   ;   | ' SFT | 37
+// 38|  CMND |  Z  |  X  |  C   |  V   |  B   | MUTE RS |  | PLAY   |  N   |  M    |  ,    |  .   |   /   | \ CMND| 51
+// 52                    | OPTN | CTRL | SPACE|DELETE LW|  |ENTER RS| BSPC |  ] LW | OPTN  |                        59
             bindings = <
 &kp ESC   &kp N1 &kp N2   &kp N3     &fofunc   &kp N5                               &kp N6    &kp N7      &kp N8    &kp N9   &kp N0   &kp EQUAL
 &kp TAB   &kp Q  &kp W    &kp E      &kp R     &kp T                                &kp Y     &kp U       &kp I     &kp O    &kp P    &kp LBKT
 &kp LSHFT &kp A  &sleft   &kp D      &fright   &kp G      &reset         &reset     &kp H     &kp J       &kp K     &kp L    &kp SEMI &mt RSHFT SQT
-&kp LCTRL &kp Z  &kp X    &kp C      &kp V     &kp B      &kp C_MUTE     &kp C_PP   &kp N     &kp M       &kp COMMA &kp DOT  &kp FSLH &mt RCTRL BSLH
-                          &lt 2 RET  &kp LALT  &kp SPACE  &lt 1 DEL      &lt 2 RET  &kp BSPC  &lt 1 RBKT  &kp LGUI  
+&kp LGUI  &kp Z  &kp X    &kp C      &kp V     &kp B      &lt RS C_MUTE  &kp C_PP   &kp N     &kp M       &kp COMMA &kp DOT  &kp FSLH &mt LGUI BSLH
+                          &kp LALT   &kp LCTRL &kp SPACE  &lt LW DEL     &lt RS RET &kp BSPC  &lt LW RBKT &kp LALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -90,13 +115,13 @@
             label = "Raise";
 // ------------------------------------------------------------------------------------------------------------
 // |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |OUTTOG|OUTUSB| OUTBT |      |       |       |
-// |     | INS  | PSCR | GUI   | RESET |      |                | PGUP |      |   ^   |      |       |       |
+// |macOS| INS  | PSCR | GUI   | RESET |      |                | PGUP |      |   ^   |      |       |       |
 // |     | ALT  | CTRL | SHIFT | FLASH | CAPS |      |  |      | PGDN |   <- |   v   |  ->  |  DEL  | BSPC  |
 // |     | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |  |>  |  <|<| | |>|> |       |       |
 //                     |       |       |      |      |  |      |      |      |       |       
             bindings = <
 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                    &out OUT_TOG  &out OUT_USB  &out OUT_BLE  &trans     &reset  &bootloader
-&trans     &kp INS      &kp PSCRN    &kp K_CMENU  &reset       &trans                          &kp PG_UP     &trans        &kp UP        &trans     &kp N0  &trans
+&tog MC    &kp INS      &kp PSCRN    &kp K_CMENU  &reset       &trans                          &kp PG_UP     &trans        &kp UP        &trans     &kp N0  &trans
 &trans     &kp LALT     &kp LCTRL    &kp LSHFT    &bootloader  &kp CLCK     &trans   &trans    &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT  &kp DEL &kp BSPC
 &trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans       &trans   &trans    &trans        &kp C_PP      &kp C_PREV    &kp C_NEXT &trans  &trans
                                      &trans       &trans       &trans       &trans   &trans    &trans        &trans        &trans   
