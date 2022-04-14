@@ -2,11 +2,9 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: nettema
-      url-base: https://github.com/nettema
   projects:
     - name: zmk
-      remote: nettema
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
   self:
