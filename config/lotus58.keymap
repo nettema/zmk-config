@@ -33,6 +33,14 @@
             bindings = <&kp N4>, <&kp F4>;
             mods = <(MOD_LALT|MOD_RALT)>;
         };
+        gresc: grave_escape {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_ESCAPE";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
+            mods = <(MOD_LCTRL|MOD_RSFT)>;
+            keep-mods = <(MOD_LCTRL)>;
+        };
         sleft: s_left {
             compatible = "zmk,behavior-mod-morph";
             label = "S_LEFT";
