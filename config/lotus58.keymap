@@ -38,8 +38,8 @@
             label = "GRAVE_ESCAPE";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp GRAVE>;
-            mods = <(MOD_LCTRL|MOD_RSFT)>;
-            keep-mods = <(MOD_LCTRL)>;
+            mods = <(MOD_LCTL|MOD_RSFT)>;
+            keep-mods = <(MOD_LCTL)>;
         };
         sleft: s_left {
             compatible = "zmk,behavior-mod-morph";
