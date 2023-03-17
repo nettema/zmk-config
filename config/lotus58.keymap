@@ -32,6 +32,7 @@
             #binding-cells = <0>;
             bindings = <&kp N4>, <&kp F4>;
             mods = <(MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LALT|MOD_RALT)>;
         };
         gresc: grave_escape {
             compatible = "zmk,behavior-mod-morph";
