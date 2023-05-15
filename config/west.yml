@@ -9,8 +9,9 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmkencoder
+    - name: zmk_encoder
       remote: zmk-encoder
+      repo-path: zmk
       revision: encoder
       import: app/west.yml
   self:
