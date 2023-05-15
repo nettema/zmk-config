@@ -5,11 +5,11 @@ manifest:
     - name: zmk-encoder
       url-base: https://github.com/tklzg
   projects:
-    - name: zmk
+    - name: zmk_no_encoder
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk_encoder
+    - name: zmk
       remote: zmk-encoder
       repo-path: zmk
       revision: encoder
