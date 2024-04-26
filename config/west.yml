@@ -2,18 +2,11 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: zmk-encoder
-      url-base: https://github.com/tklzg
   projects:
-    - name: zmk_no_encoder
+    - name: zmk
       remote: zmkfirmware
       repo-path: zmk
       revision: main
-      import: app/west.yml
-    - name: zmk
-      remote: zmk-encoder
-      repo-path: zmk
-      revision: encoder
       import: app/west.yml
   self:
     path: config
