@@ -74,7 +74,7 @@
 &gresc    &kp N1 &kp N2   &kp N3      &fofunc   &kp N5                               &kp N6    &kp N7      &kp N8    &kp N9   &kp N0   &kp EQUAL
 &kp TAB   &kp Q  &kp W    &kp E       &kp R     &kp T                                &kp Y     &kp U       &kp I     &kp O    &kp P    &kp LBKT
 &kp LSHFT &kp A  &sleft   &kp D       &fright   &kp G      &sys_reset     &sys_reset &kp H     &kp J       &kp K     &kp L    &kp SEMI &mt RSHFT SQT
-&kp LCTRL &kp Z  &kp X    &kp C       &kp V     &kp B      &lt RS C_MUTE  &kp C_PP   &kp N     &kp M       &kp COMMA &kp DOT  &kp FSLH &mt RCTRL BSLH
+&kp LCTRL &kp Z  &kp X    &kp C       &kp V     &kp B      &lt RS C_MUTE  &kp C_PP   &kp N     &kp M       &kp COMMA &kp DOT  &kp FSLH &mt RCTRL MINUS
                           &lt RS RET  &kp LALT  &kp SPACE  &lt LW DEL     &lt RS RET &kp BSPC  &lt LW RBKT &kp LGUI  
             >;
 
@@ -94,7 +94,7 @@
 &gresc   &kp N1 &kp N2   &kp N3     &fofunc   &kp N5                               &kp N6    &kp N7      &kp N8    &kp N9   &kp N0   &kp EQUAL
 &kp TAB   &kp Q  &kp W    &kp E      &kp R     &kp T                                &kp Y     &kp U       &kp I     &kp O    &kp P    &kp LBKT
 &kp LSHFT &kp A  &kp S    &kp D      &kp F     &kp G      &sys_reset     &sys_reset &kp H     &kp J       &kp K     &kp L    &kp SEMI &mt RSHFT SQT
-&kp LGUI  &kp Z  &kp X    &kp C      &kp V     &kp B      &lt RS C_MUTE  &kp C_PP   &kp N     &kp M       &kp COMMA &kp DOT  &kp FSLH &mt LGUI BSLH
+&kp LGUI  &kp Z  &kp X    &kp C      &kp V     &kp B      &lt RS C_MUTE  &kp C_PP   &kp N     &kp M       &kp COMMA &kp DOT  &kp FSLH &mt LGUI MINUS
                           &kp LCTRL  &kp LALT  &kp SPACE  &lt LW DEL     &lt RS RET &kp BSPC  &lt LW RBKT &kp LALT  
             >;
 
@@ -113,7 +113,7 @@
 &kp GRAVE  &kp F1    &kp F2    &kp F3      &kp F4     &kp F5                     &kp F6        &kp F7     &kp F8    &kp F9     &kp F10   &kp PLUS
 &kp CAPS   &kp EXCL  &kp HOME  &kp UP      &kp END    &kp PRCNT                  &kp C_VOL_UP  &kp PG_UP  &kp INS   &kp CARET  &kp PSCRN &kp MINUS
 &trans     &kp HASH  &kp LEFT  &kp DOWN    &kp RIGHT  &kp DLLR  &trans   &trans  &kp C_VOL_DN  &kp LEFT   &kp UP    &kp RIGHT  &kp TILDE &kp UNDER
-&trans     &kp AT    &kp MINUS &kp LBRC    &kp RBRC   &kp AMPS  &trans   &trans  &kp C_MUTE    &kp PG_DN  &kp DOWN  &kp COLON  &kp STAR  &kp PIPE
+&trans     &kp AT    &kp MINUS &kp LBRC    &kp RBRC   &kp AMPS  &trans   &trans  &kp C_MUTE    &kp PG_DN  &kp DOWN  &kp COLON  &kp STAR  &kp BSLH
                                &kp F11     &trans     &trans    &trans   &trans  &trans        &trans     &kp F12
             >;
 
