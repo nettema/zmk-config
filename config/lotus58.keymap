@@ -68,7 +68,7 @@
 //  0|  ESC  |  1  |  2  |  3   |  4   |  5   |                     |  6   |  7    |  8    |  9   |   0   |   =   | 11
 // 12|  TAB  |  Q  |  W  |  E   |  R   |  T   |                     |  Y   |  U    |  I    |  O   |   P   |   [   | 23
 // 24|  SFT  |  A  |  S  |  D   |  F   |  G   |  RESET  |  | RESET  |  H   |  J    |  K    |  L   |   ;   | ' SFT | 37
-// 38|  CTRL |  Z  |  X  |  C   |  V   |  B   | MUTE RS |  | PLAY   |  N   |  M    |  ,    |  .   |   /   | \ CTRL| 51
+// 38|  CTRL |  Z  |  X  |  C   |  V   |  B   | MUTE RS |  | PLAY   |  N   |  M    |  ,    |  .   |   /   | - CTRL| 51
 // 52                    |ENT RS|  ALT | SPACE|DELETE LW|  |ENTER RS| BSPC |  ] LW | RGUI  |                        59
             bindings = <
 &gresc    &kp N1 &kp N2   &kp N3      &fofunc   &kp N5                               &kp N6    &kp N7      &kp N8    &kp N9   &kp N0   &kp EQUAL
@@ -88,7 +88,7 @@
 //  0|  ESC  |  1  |  2  |  3   |  4   |  5   |                     |  6   |  7    |  8    |  9   |   0   |   =   | 11
 // 12|  TAB  |  Q  |  W  |  E   |  R   |  T   |                     |  Y   |  U    |  I    |  O   |   P   |   [   | 23
 // 24|  SFT  |  A  |  S  |  D   |  F   |  G   |  RESET  |  | RESET  |  H   |  J    |  K    |  L   |   ;   | ' SFT | 37
-// 38|  CMND |  Z  |  X  |  C   |  V   |  B   | MUTE RS |  | PLAY   |  N   |  M    |  ,    |  .   |   /   | \ CMND| 51
+// 38|  CMND |  Z  |  X  |  C   |  V   |  B   | MUTE RS |  | PLAY   |  N   |  M    |  ,    |  .   |   /   | - CMND| 51
 // 52                    | OPTN | CTRL | SPACE|DELETE LW|  |ENTER RS| BSPC |  ] LW | OPTN  |                        59
             bindings = <
 &gresc   &kp N1 &kp N2   &kp N3     &fofunc   &kp N5                               &kp N6    &kp N7      &kp N8    &kp N9   &kp N0   &kp EQUAL
@@ -107,7 +107,7 @@
 // | `     |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
 // |       |  !  | HOME|   ^  |  END |  %   |                   | VOL^ |  PGUP |  INS  |  ^   |  PSCR |   -   |
 // |       |  #  |  <- |   v  | ->   |  $   |        |  |       | VOLv |    <- |   ^   |  ->  |   ~   |   _   |
-// |       |  @  |  -  |  (   |  )   |  &   |        |  |       | MUTE |  PGDN |   v   |  :   |   *   |   |   |
+// |       |  @  |  -  |  (   |  )   |  &   |        |  |       | MUTE |  PGDN |   v   |  :   |   *   |   \|   |
 //                     |  F11 |      |      |        |  |       |      |       |  F12  |       
             bindings = <
 &kp GRAVE  &kp F1    &kp F2    &kp F3      &kp F4     &kp F5                     &kp F6        &kp F7     &kp F8    &kp F9     &kp F10   &kp PLUS
